@@ -17,21 +17,17 @@ from __future__ import annotations
 from soar_sdk.SiemplifyAction import SiemplifyAction
 from soar_sdk.SiemplifyUtils import output_handler
 
-from ..core.IPInfoManager import IPInfoManager
+from ._common import build_manager
 
 ACTION_NAME = "IPInfo Ping"
-PROVIDER = "IPInfo"
 
 
 @output_handler
 def main():
     siemplify = SiemplifyAction()
     siemplify.script_name = ACTION_NAME
-    conf = siemplify.get_configuration(PROVIDER)
-    verify_ssl = conf.get("Verify SSL", "false").lower() == "true"
-    ipinfo_manager = IPInfoManager(conf["API Root"], conf["Token"], verify_ssl)
-
-    siemplify.end("Connection Established.", ipinfo_manager.ping())
+    manager = build_manager(siemplify)
+    siemplify.end("Connection Established.", manager.ping())
 
 
 if __name__ == "__main__":

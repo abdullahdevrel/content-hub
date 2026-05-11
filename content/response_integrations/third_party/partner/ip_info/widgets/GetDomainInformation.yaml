@@ -16,7 +16,7 @@ title: IPInfo - Get Domain Information
 type: html
 scope: alert
 action_identifier: Get Domain Information
-description: This widget highlights the most important items in Get Domain Information
+description: This widget renders the Get Domain Information action's JSON result.
 data_definition:
     html_height: 400
     safe_rendering: false

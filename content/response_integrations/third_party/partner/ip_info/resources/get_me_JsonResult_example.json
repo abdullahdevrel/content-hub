@@ -1,0 +1,15 @@
+{
+    "token": "REDACTED",
+    "requests": {
+        "day": 0,
+        "month": 69,
+        "limit": 50000,
+        "remaining": 49931
+    },
+    "features": {
+        "core": {
+            "daily": 50000,
+            "monthly": 50000
+        }
+    }
+}

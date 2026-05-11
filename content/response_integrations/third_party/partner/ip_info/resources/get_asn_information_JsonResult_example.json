@@ -1,0 +1,36 @@
+[
+    {
+        "Entity": "AS15169",
+        "EntityResult": {
+            "asn": "AS15169",
+            "name": "Google LLC",
+            "country": "US",
+            "allocated": "2000-03-30",
+            "registry": "arin",
+            "domain": "google.com",
+            "num_ips": 8628992,
+            "route": "8.8.8.0/24",
+            "type": "hosting",
+            "prefixes": [
+                {
+                    "netblock": "8.8.8.0/24",
+                    "id": "LVLT-GOGL-8-8-8",
+                    "name": "Google LLC",
+                    "country": "US",
+                    "size": "256",
+                    "status": "ASSIGNMENT",
+                    "domain": "google.com"
+                }
+            ],
+            "prefixes6": [],
+            "peers": [
+                "1299",
+                "3356"
+            ],
+            "upstreams": [
+                "1299"
+            ],
+            "downstreams": []
+        }
+    }
+]

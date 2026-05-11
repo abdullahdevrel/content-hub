@@ -12,10 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: Ping
-description: Verify connectivity and IPinfo API token validity by calling the /me endpoint.
+name: Get ASN Information
+description: Fetch detailed information about an Autonomous System Number (allocated prefixes, peers, upstreams, downstreams).
 integration_identifier: IPInfo
-parameters: []
-dynamic_results_metadata: []
+parameters:
+-   name: ASN
+    default_value: ''
+    type: string
+    description: 'The ASN to look up. Accepts AS15169, as15169, or 15169.'
+    is_mandatory: true
+    integration_identifier: IPInfo
+dynamic_results_metadata:
+-   result_example_path: resources/get_asn_information_JsonResult_example.json
+    result_name: JsonResult
+    show_result: true
 creator: Admin
-script_result_name: ping_status
+simulation_data_json: '{}'

@@ -1,0 +1,13 @@
+[
+    {
+        "Entity": "1.1.1.1",
+        "EntityResult": {
+            "vpn": true,
+            "proxy": false,
+            "tor": false,
+            "hosting": false,
+            "relay": false,
+            "service": ""
+        }
+    }
+]

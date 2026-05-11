@@ -12,20 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Get IP Information action.
-
-Preserved for backwards compatibility with existing playbooks built against
-v7.0 and earlier. This action now calls the IPinfo Core API (`/lookup/{ip}`),
-which is the closest modern equivalent of the legacy IP-enrichment endpoint
-and the recommended replacement.
-
-New playbooks should use the explicit tier action that best matches their
-licensing and detection needs:
-  - IPInfo Get Lite Information     (free / unlimited country + ASN)
-  - IPInfo Get Core Information     (city-level geo + ASN + classification)
-  - IPInfo Get Plus Information     (Core + mobile + anonymity)
-  - IPInfo Get Max Information      (Plus + residential proxy)
-"""
 from __future__ import annotations
 
 from soar_sdk.SiemplifyAction import SiemplifyAction
@@ -33,7 +19,7 @@ from soar_sdk.SiemplifyUtils import output_handler
 
 from ._common import ADDRESS, build_manager, enrich_entities
 
-ACTION_NAME = "IPInfo Get_IP_Information"
+ACTION_NAME = "IPInfo Get_Residential_Proxy_Information"
 
 
 @output_handler
@@ -44,8 +30,8 @@ def main():
     enrich_entities(
         siemplify,
         ADDRESS,
-        manager.get_core_information,
-        label="IP (Core)",
+        manager.get_residential_proxy_information,
+        label="Residential Proxy",
     )
 
 

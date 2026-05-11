@@ -12,11 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-title: IPInfo - Get IP Information
+title: IPInfo - Get ASN Information
 type: html
 scope: alert
-action_identifier: Get IP Information
-description: This widget renders the Get IP Information action's JSON result.
+action_identifier: Get ASN Information
+description: This widget renders the Get ASN Information action's JSON result.
 data_definition:
     html_height: 400
     safe_rendering: false

@@ -12,10 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: Ping
-description: Verify connectivity and IPinfo API token validity by calling the /me endpoint.
+name: Get Privacy Information
+description: Fetch Privacy Detection Standard signals for an IP address (VPN, proxy, Tor, relay, hosting).
 integration_identifier: IPInfo
 parameters: []
-dynamic_results_metadata: []
+dynamic_results_metadata:
+-   result_example_path: resources/get_privacy_information_JsonResult_example.json
+    result_name: JsonResult
+    show_result: true
 creator: Admin
-script_result_name: ping_status
+simulation_data_json: '{"Entities": ["ADDRESS"]}'

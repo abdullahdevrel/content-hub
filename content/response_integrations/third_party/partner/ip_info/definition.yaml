@@ -16,26 +16,27 @@ identifier: IPInfo
 name: IPInfo
 parameters:
 -   name: API Root
-    default_value: ''
+    default_value: 'https://api.ipinfo.io/'
     type: url
-    description: ''
+    description: 'IPinfo API root URL. Defaults to https://api.ipinfo.io/. Override only for IPv4-only or IPv6-only endpoints.'
     is_mandatory: true
     integration_identifier: IPInfo
 -   name: Token
     default_value: ''
     type: password
-    description: ''
+    description: 'IPinfo API access token. Get one at https://ipinfo.io/signup.'
     is_mandatory: true
     integration_identifier: IPInfo
 -   name: Verify SSL
     default_value: true
     type: boolean
-    description: ''
+    description: 'Verify the SSL certificate when calling the IPinfo API. Leave enabled in production.'
     is_mandatory: true
     integration_identifier: IPInfo
-documentation_link: https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/ipinfo
+documentation_link: https://ipinfo.io/developers/google-secops
 categories:
 - Data Enrichment
 - Operational
+- Threat Intelligence
 svg_logo_path: resources/logo.svg
 image_path: resources/image.png

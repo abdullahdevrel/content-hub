@@ -1,5 +1,5 @@
 {
-    "API Root": "",
+    "API Root": "https://api.ipinfo.io/",
     "Token": "",
-    "Use SSL": ""
+    "Verify SSL": "true"
 }

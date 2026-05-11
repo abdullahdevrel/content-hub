@@ -13,12 +13,24 @@
 # limitations under the License.
 
 name: Get Domain Information
-description: Fetch domain information for address.
+description: "**Breaking change in v8.0**: This action now performs a reverse-IP lookup (domains hosted on an IP) using the IPinfo Hosted Domains API (/domains/{ip}). It operates on ADDRESS entities. Previously it looked up HOSTNAME entities via the /domains/{domain} endpoint. Update existing playbooks accordingly."
 integration_identifier: IPInfo
-parameters: []
+parameters:
+-   name: Page
+    default_value: ''
+    type: integer
+    description: 'Optional page number (starts at 0).'
+    is_mandatory: false
+    integration_identifier: IPInfo
+-   name: Limit
+    default_value: '100'
+    type: integer
+    description: 'Number of domains per page (1-1000, default 100).'
+    is_mandatory: false
+    integration_identifier: IPInfo
 dynamic_results_metadata:
 -   result_example_path: resources/get_domain_information_JsonResult_example.json
     result_name: JsonResult
     show_result: true
 creator: Admin
-simulation_data_json: '{"Entities": ["HOSTNAME"]}'
+simulation_data_json: '{"Entities": ["ADDRESS"]}'
